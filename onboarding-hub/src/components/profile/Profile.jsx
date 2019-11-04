@@ -96,13 +96,13 @@ const Profile = () => {
                                 <p>I would like to participate in the Educational Research</p></span>}
                     </div>
 
-                    <div className="flex-two">
-                        {/**=============== Manage Profile  ======================= */}
-                        <div>
-                            <h2>Manage Profile</h2>
-                            <p>Place Holder Info</p>
-                        </div>
-                    </div>
+                    {/**=============== Manage Profile  ======================= */}
+                    {/** <div className="flex-two">
+                            <div>
+                                <h2>Manage Profile</h2>
+                                <p>Place Holder Info</p>
+                            </div>
+                    </div>   */}
 
                 </div>
             </div> : <div>
@@ -147,13 +147,13 @@ const Profile = () => {
                                     <p>I would like to participate in the Educational Research</p></span>}
                         </div>
 
-                        <div className="flex-two">
-                            {/**=============== Manage Profile  ======================= */}
+                        {/**=============== Manage Profile  ======================= */}
+                        {/** <div className="flex-two">
                             <div>
                                 <h2>Manage Profile</h2>
                                 <p>Place Holder Info</p>
                             </div>
-                        </div>
+                    </div>   */}
 
                     </div>
                 </div>
