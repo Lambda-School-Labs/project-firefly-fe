@@ -29,7 +29,6 @@ const Profile = () => {
             });
     }, []);
 
-
     const user = {
         email: 'email@email.com',
         password: '123456789',
@@ -61,13 +60,13 @@ const Profile = () => {
                         {/**=============== Account Information  ======================= */}
                         <div className="flex-one">
                             <h2>Account Information</h2>
-                            <span><p>Email:</p> <input></input></span>
-                            <span><p>Password:</p> <input></input></span>
+                            <span><p>Email:</p> <input value={user.email}></input></span>
+                            <span><p>Password:</p> <input value={user.password}></input></span>
                         </div>
                         {/**=============== Payment Information  ======================= */}
                         <div>
                             <h2>Payment Information</h2>
-                            <span><p>Subscription:</p><input></input></span>
+                            <span><p>Subscription:</p></span>
                         </div>
                         {/**=============== Educational Research Participation Toggle  ======================= */}
                         <div>
@@ -76,17 +75,17 @@ const Profile = () => {
                         {/**=============== Educational Research Information  ======================= */}
                         {checked ? <div>
                             <div>
-                                <span><p>Phone Number:</p><input></input></span>
-                                <span><p>Academic Research:</p><input></input></span>
-                                <span><p>Parent Age:</p><input></input></span>
-                                <span><p>Marital Status:</p><input></input></span>
-                                <span><p>Relation to Child:</p><input></input></span>
-                                <span><p>Education:</p><input></input></span>
-                                <span> <p>Address: <input></input></p></span>
-                                <span> <p>City: <input></input></p></span>
-                                <span> <p>State: <input></input></p></span>
-                                <span> <p>country: <input></input></p></span>
-                                <span> <p>Zip: <input></input></p></span>
+                                <span><p>Phone Number:</p><input value={user.phone_number}></input></span>
+                                <span><p>Academic Research:</p><input value={user.academic_research}></input></span>
+                                <span><p>Parent Age:</p><input value={user.parent_age}></input></span>
+                                <span><p>Marital Status:</p><input value={user.marital_status}></input></span>
+                                <span><p>Relation to Child:</p><input value={user.relation_to_child}></input></span>
+                                <span><p>Education:</p><input value={user.education}></input></span>
+                                <span> <p>Address: <input value={user.address}></input></p></span>
+                                <span> <p>City: <input value={user.city}></input></p></span>
+                                <span> <p>State: <input value={user.state}></input></p></span>
+                                <span> <p>country: <input value={user.country}></input></p></span>
+                                <span> <p>Zip: <input value={user.zip}></input></p></span>
                             </div>
                         </div> : <span><input
                             type='checkbox'
