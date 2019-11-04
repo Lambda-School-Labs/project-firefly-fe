@@ -1,15 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 
 import './profile.scss';
 
 const Profile = () => {
     const [checked, setChecked] = useState(false);
     const [edit, setEdit] = useState(false)
+    // const [user, setUser] = useState({})
 
-    const handleChange = event => {
+    const handleCheck = event => {
         setChecked(event.target.checked)
         console.log(event.target.checked)
     };
+
+    const handleEdit = event => {
+
+    };
+
+    useEffect(() => {
+        // Grab the current user from cookies and feed it into the axios call
+        axios
+            .get(`https://projectfirefly.herokuapp.com/users/{id}`)
+            .then(response => {
+                // setUser(response.data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }, []);
+
 
     const user = {
         email: 'email@email.com',
@@ -73,7 +92,7 @@ const Profile = () => {
                             type='checkbox'
                             name='Educational-Research'
                             checked={checked}
-                            onChange={handleChange}
+                            onChange={handleCheck}
                         />
                                 <p>I would like to participate in the Educational Research</p></span>}
                     </div>
@@ -124,7 +143,7 @@ const Profile = () => {
                                 type='checkbox'
                                 name='Educational-Research'
                                 checked={checked}
-                                onChange={handleChange}
+                                onChange={handleCheck}
                             />
                                     <p>I would like to participate in the Educational Research</p></span>}
                         </div>
